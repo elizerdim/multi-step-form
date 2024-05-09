@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Multi-Step Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a [tutorial](https://www.youtube.com/watch?v=uDCBSnWkuH0&list=PL4EX4Aw5_AFv-9yS-9lF3SNHUImZyygK7&index=4&t=20s) project from [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified) on YouTube. (shoutout to Kyle - he's awesome!)
 
-Currently, two official plugins are available:
+## The challenge
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Users should be able to:
 
-## Expanding the ESLint configuration
+- Navigate the form steps back and forth 
+- See the step number / total steps in the upper right corner
+- Find the previous data in input fields when they navigate after filling out some fields
+- See the alert message after they click finish button in the last step
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Screenshot
 
-- Configure the top-level `parserOptions` property like this:
+![](./screenshot.jpeg)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Links
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [View Code](https://github.com/elizerdim/multi-step-form)
+- [Live Preview](https://multi-step-form-ecru-sigma.vercel.app/)
+
+## Built with
+
+- React
+- TypeScript
+
+## What I learned
+
+This was a nice little project to practice React with TypeScript and solidify my knowledge of them. It was also good to see how a challenge like this can be tackled by using hooks and state.
+
+- React custom hooks
+- Partials in TypeScript
+- Combining types with & operator in TypeScript
+
+## Useful resources
+
+- [Differences Between Type Aliases and Interfaces](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces) - This link has an example for combining types with & operator, and how it is used compared to extended interfaces.
