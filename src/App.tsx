@@ -1,3 +1,4 @@
+import { FormEvent } from "react";
 import AccountForm from "./AccountForm";
 import AddressForm from "./AddressForm";
 import UserForm from "./UserForm";
@@ -6,6 +7,12 @@ import { useMultistepForm } from "./useMultistepForm";
 export default function App() {
   const { currentStepIndex, step, steps, isFirstStep, isLastStep, next, back } =
     useMultistepForm([<UserForm />, <AddressForm />, <AccountForm />]);
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    next();
+  }
+
   return (
     <div
       style={{
@@ -18,7 +25,7 @@ export default function App() {
         fontFamily: "Arial",
       }}
     >
-      <form>
+      <form onSubmit={handleSubmit}>
         <div style={{ position: "absolute", top: ".5rem", right: ".5rem" }}>
           {currentStepIndex + 1} / {steps.length}
         </div>
@@ -36,7 +43,7 @@ export default function App() {
               Back
             </button>
           )}
-          <button type="button" onClick={next}>
+          <button type="submit">
             {isLastStep ? "Finish" : "Next"}
           </button>
         </div>
