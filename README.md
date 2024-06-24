@@ -27,7 +27,7 @@ Users should be able to:
 
 ## What I learned
 
-This was a nice little project to practice React with TypeScript and solidify my knowledge of them. It was also good to see how a challenge like this can be tackled by using hooks and state.
+This project was really good to understand how a custom hook can be used to tackle a challenge like this. It was also good for practicing React with TypeScript and solidifying my knowledge of them. 
 
 - React custom hooks
 - Partials in TypeScript
